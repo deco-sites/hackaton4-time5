@@ -8,16 +8,33 @@
     "check": "deno fmt && deno lint && deno check dev.ts main.ts",
     "install": "deno eval 'import \"$live/scripts/apps/install.ts\"'",
     "uninstall": "deno eval 'import \"$live/scripts/apps/uninstall.ts\"'",
-    "bundle": "deno eval 'import \"$live/scripts/apps/bundle.ts\"' deco-sites/hackaton4-time5"
+    "bundle": "deno eval 'import \"$live/scripts/apps/bundle.ts\"' deco-sites/hackaton4-time5",
+    "build": "deno run -A dev.ts build",
+    "preview": "deno run -A main.ts"
   },
-  "githooks": {
-    "pre-commit": "check"
-  },
-  "exclude": ["node_modules", "static/", "README.md"],
+  "githooks": { "pre-commit": "check" },
+  "exclude": ["node_modules", "static/", "README.md", "**/_fresh/*"],
   "nodeModulesDir": true,
-  "importMap": "./import_map.json",
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "jsxImportSource": "preact"
-  }
+  "compilerOptions": { "jsx": "react-jsx", "jsxImportSource": "preact" },
+  "imports": {
+    "deco-sites/hackaton4-time5/": "./",
+    "deco-sites/links/": "./",
+    "$store/": "./",
+    "deco/": "https://denopkg.com/deco-cx/deco@1.44.6/",
+    "$live/": "https://denopkg.com/deco-cx/deco@1.44.6/",
+    "$fresh/": "https://deno.land/x/fresh@1.5.2/",
+    "preact": "https://esm.sh/preact@10.18.1",
+    "preact/": "https://esm.sh/preact@10.18.1/",
+    "preact-render-to-string": "https://esm.sh/*preact-render-to-string@6.2.2",
+    "@preact/signals": "https://esm.sh/*@preact/signals@1.2.1",
+    "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.0",
+    "twind": "https://esm.sh/twind@0.16.19",
+    "twind/": "https://esm.sh/twind@0.16.19/",
+    "std/": "https://deno.land/std@0.190.0/",
+    "prefetch": "https://deno.land/x/prefetch@0.0.6/mod.ts",
+    "apps/": "https://denopkg.com/deco-cx/apps@0.18.1/",
+    "partytown/": "https://denopkg.com/deco-cx/partytown@0.4.8/",
+    "daisyui": "npm:daisyui@3.9.2"
+  },
+  "lint": { "rules": { "tags": ["fresh", "recommended"] } }
 }

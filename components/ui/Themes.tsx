@@ -340,6 +340,34 @@ const defaultTheme = {
   "--tab-radius": "0.5rem", // border radius of tabs
 };
 
+
+const theme01 = {
+  "primary": "hsla(209, 28%, 21%, 1)",
+  "primary-content": "hsla(0, 0%, 100%, 1)",
+  "secondary": "hsla(104, 18%, 46%, 1)",
+  "secondary-content": "hsla(0, 0%, 100%, 1)",
+  "tertiary": "hsla(8, 69%, 65%, 1)",
+  "tertiary-content": "hsla(0, 0%, 100%, 1)",
+  "neutral": "hsla(0, 0%, 47%, 1)",
+  "base-100": "hsla(0, 0%, 100%, 1)",
+  "success": "hsl(150 62% 95%)",
+  "warning": "hsl(43 100% 95%)",
+  "error": "hsl(9 100% 95%)",
+  "info": "hsl(220 100% 97%)",
+
+  "--rounded-box": "1rem", // border radius rounded-box utility class, used in card and other large boxes
+  "--rounded-btn": "0.2rem" as const, // border radius rounded-btn utility class, used in buttons and similar element
+  "--rounded-badge": "1.9rem", // border radius rounded-badge utility class, used in badges and similar
+  "--animation-btn": "0.25s" as const, // duration of animation when you click on button
+  "--animation-input": "0.2s", // duration of animation for inputs like checkbox, toggle, radio, etc
+  "--btn-text-case": "uppercase" as const, // set default text transform for buttons
+  "--btn-focus-scale": "0.95" as const, // scale transform of button when you focus on it
+  "--border-btn": "1px" as const, // border width of buttons
+  "--tab-border": "1px", // border width of tabs
+  "--tab-radius": "0.5rem", // border radius of tabs
+};
+
+
 /**
  * This section merges the DESIGN_SYTEM variable with incoming props into a css sheet with variables, i.e.
  * this function transforms props into
